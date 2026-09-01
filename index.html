@@ -2,32 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
+  <!-- Mobile responsive setting -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>FreshFold Laundry Services</title>
-  <meta name="description" content="Professional laundry and dry-cleaning services with easy online booking.">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Bootstrap is only used for the grid, buttons and basic responsive utilities. -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm" id="navbar">
+  <!--
+    NAVBAR
+    I kept the navigation simple so that each link takes the user to
+    one clear section of the page.
+  -->
+  <nav class="navbar navbar-expand-lg bg-white sticky-top border-bottom">
     <div class="container">
-      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#home">
-        <span class="brand-mark"><i class="bi bi-basket2-fill"></i></span>
+      <a class="navbar-brand fw-bold" href="#home">
+        <span class="logo-icon"><i class="bi bi-basket2-fill"></i></span>
         Fresh<span>Fold</span>
       </a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNavigation"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="mainNav">
+
+      <div class="collapse navbar-collapse" id="mainNavigation">
         <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
-          <li class="nav-item ms-lg-2">
+          <li class="nav-item">
             <a class="btn btn-primary rounded-pill px-4" href="#booking">Book Now</a>
           </li>
         </ul>
@@ -35,272 +60,399 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="hero-section" id="home">
+
+  <!-- HERO -->
+  <header id="home" class="hero">
     <div class="container">
       <div class="row align-items-center g-5">
+
         <div class="col-lg-6">
-          <span class="eyebrow"><i class="bi bi-stars me-1"></i> Professional laundry care</span>
-          <h1>Revitalize Your Clothes with <span>Expert Laundry Services!</span></h1>
-          <p class="lead text-muted">
-            From premium cleaning to swift and reliable delivery, we take care of your laundry with professional attention to detail.
+          <p class="small-heading">PROFESSIONAL LAUNDRY CARE</p>
+
+          <h1>
+            Revitalize Your Clothes with
+            <span>Expert Laundry Services!</span>
+          </h1>
+
+          <p class="hero-text">
+            From premium cleaning to reliable delivery, we take care of
+            your clothes so you can spend your time on what matters.
           </p>
-          <div class="d-flex flex-wrap gap-3">
-            <a href="#booking" class="btn btn-primary btn-lg rounded-pill px-4">Book a service today! <i class="bi bi-arrow-right ms-1"></i></a>
-            <a href="#services" class="btn btn-outline-primary btn-lg rounded-pill px-4">Explore services</a>
-          </div>
-          <div class="hero-trust mt-4">
-            <span><i class="bi bi-check-circle-fill"></i> Premium care</span>
-            <span><i class="bi bi-check-circle-fill"></i> Quick turnaround</span>
-            <span><i class="bi bi-check-circle-fill"></i> Easy pickup</span>
-          </div>
+
+          <a href="#booking" class="btn btn-primary btn-lg rounded-pill">
+            Book a service today <i class="bi bi-arrow-right"></i>
+          </a>
         </div>
+
         <div class="col-lg-6">
-          <div class="hero-visual">
-            <div class="floating-card card-one"><i class="bi bi-droplet-half"></i><span>Deep Clean</span></div>
-            <div class="floating-card card-two"><i class="bi bi-truck"></i><span>Fast Delivery</span></div>
-            <div class="laundry-machine">
+          <!-- Simple CSS illustration instead of an external image. -->
+          <div class="washing-machine-area">
+            <div class="bubble bubble-one"></div>
+            <div class="bubble bubble-two"></div>
+
+            <div class="machine">
               <div class="machine-top"></div>
               <div class="machine-body">
-                <div class="machine-panel"><span></span><span></span><span></span></div>
+                <div class="machine-controls">
+                  <span></span><span></span><span></span>
+                </div>
                 <div class="machine-door">
                   <div class="machine-glass">
-                    <div class="shirt-shape"></div>
-                    <div class="sock-shape"></div>
+                    <div class="shirt"></div>
+                    <div class="sock"></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="laundry-basket"><i class="bi bi-basket3-fill"></i></div>
-            <div class="bubble bubble-1"></div>
-            <div class="bubble bubble-2"></div>
-            <div class="bubble bubble-3"></div>
+
+            <div class="info-card card-left">
+              <i class="bi bi-stars"></i>
+              <span>Deep Clean</span>
+            </div>
+
+            <div class="info-card card-right">
+              <i class="bi bi-truck"></i>
+              <span>Fast Delivery</span>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   </header>
 
-  <!-- Achievements / Service Overview -->
-  <section class="achievement-strip" id="about">
+
+  <!-- ACHIEVEMENTS -->
+  <section class="achievement-bar">
     <div class="container">
       <div class="row text-center g-3">
         <div class="col-6 col-lg-3">
-          <div class="achievement"><i class="bi bi-award-fill"></i><strong>15+</strong><span>Laundry Services</span></div>
+          <strong>15+</strong>
+          <span>Laundry Services</span>
         </div>
         <div class="col-6 col-lg-3">
-          <div class="achievement"><i class="bi bi-people-fill"></i><strong>240+</strong><span>Happy Customers</span></div>
+          <strong>240+</strong>
+          <span>Happy Customers</span>
         </div>
         <div class="col-6 col-lg-3">
-          <div class="achievement"><i class="bi bi-clock-history"></i><strong>2+ Yrs</strong><span>Experience</span></div>
+          <strong>2+ Yrs</strong>
+          <span>Experience</span>
         </div>
         <div class="col-6 col-lg-3">
-          <div class="achievement"><i class="bi bi-truck"></i><strong>24/7</strong><span>Pickup Support</span></div>
+          <strong>24/7</strong>
+          <span>Pickup Support</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services -->
-  <section class="section-padding" id="services">
+
+  <!-- SERVICES -->
+  <section id="services" class="section-padding">
     <div class="container">
-      <div class="section-heading text-center mb-5">
-        <span class="eyebrow">What we offer</span>
+
+      <div class="section-title text-center">
+        <p>WHAT WE OFFER</p>
         <h2>Our Services</h2>
-        <p>Choose from our professional laundry services. Add as many as you need to your booking.</p>
+        <span>
+          Select the laundry services you need and add them to your booking.
+        </span>
       </div>
-      <div class="row g-4" id="serviceGrid"></div>
+
+      <div class="row g-4" id="serviceCards">
+        <!-- JavaScript creates service cards here. -->
+      </div>
+
     </div>
   </section>
 
-  <!-- Booking Services / Cart -->
-  <section class="section-padding booking-section" id="booking">
+
+  <!-- BOOKING -->
+  <section id="booking" class="booking-section section-padding">
     <div class="container">
-      <div class="section-heading mb-4">
-        <span class="eyebrow">Simple & convenient</span>
+
+      <div class="section-title mb-4">
+        <p>EASY ONLINE BOOKING</p>
         <h2>Booking Services</h2>
-        <p>Select services on the left and review your booking on the right.</p>
+        <span>Choose your services on the left and review them on the right.</span>
       </div>
 
-      <div class="booking-panel">
-        <!-- Left Div -->
-        <div class="service-selector">
-          <div class="panel-heading">
+      <div class="booking-box">
+
+        <!-- LEFT DIV -->
+        <div class="available-services">
+          <div class="booking-heading">
             <div>
-              <h3>Available Services</h3>
-              <p>Add the services you need.</p>
+              <h3>Our Services</h3>
+              <p>Add the items you want to book.</p>
             </div>
-            <span class="badge rounded-pill text-bg-light" id="serviceCount">0 selected</span>
+            <span id="selectedCount" class="count-badge">0 selected</span>
           </div>
-          <div class="service-list" id="serviceList"></div>
-          <button class="btn btn-outline-primary w-100 rounded-pill mt-3" id="addAllBtn">
-            <i class="bi bi-cart-plus me-2"></i>Add Items to Cart
+
+          <div id="bookingServiceList">
+            <!-- JavaScript creates service rows here. -->
+          </div>
+
+          <button id="addFirstServices" class="btn btn-outline-primary w-100 rounded-pill mt-3">
+            <i class="bi bi-cart-plus"></i>
+            Add Items to Cart
           </button>
         </div>
 
-        <!-- Right Div -->
-        <div class="cart-panel">
-          <div class="panel-heading">
+
+        <!-- RIGHT DIV -->
+        <div class="cart-area">
+          <div class="booking-heading">
             <div>
               <h3>Added Items</h3>
-              <p>Your selected services appear here.</p>
+              <p>Your selected services will appear here.</p>
             </div>
-            <span class="cart-icon"><i class="bi bi-bag-check"></i><b id="cartCount">0</b></span>
+            <div class="cart-count">
+              <i class="bi bi-bag-check"></i>
+              <span id="cartCount">0</span>
+            </div>
           </div>
+
           <div id="cartItems" class="cart-items">
             <div class="empty-cart">
               <i class="bi bi-basket2"></i>
-              <h5>No services added yet</h5>
-              <p>Click “Add Item” beside a service to start.</p>
+              <h4>No items added</h4>
+              <p>Click Add Item beside a service.</p>
             </div>
           </div>
-          <div class="cart-total">
+
+          <div class="total-row">
             <span>Total Amount</span>
-            <strong id="cartTotal">₹0</strong>
+            <strong id="totalAmount">₹0</strong>
           </div>
 
-          <div class="divider"></div>
+          <hr>
 
-          <!-- Book Now Form -->
-          <div class="book-form">
+          <!--
+            EMAILJS BOOKING FORM
+
+            The name attributes are important.
+            They must match the variables used in the EmailJS template.
+          -->
+          <form id="bookingForm" novalidate>
             <h3>Book Now</h3>
-            <p class="text-muted small">Enter your details and confirm your laundry booking.</p>
-            <form id="bookingForm" novalidate>
-              <div class="row g-3">
-                <div class="col-12">
-                  <label for="fullName" class="form-label">Full Name</label>
-                  <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
-                  <div class="invalid-feedback">Please enter your name.</div>
-                </div>
-                <div class="col-md-6">
-                  <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
-                  <div class="invalid-feedback">Please enter a valid email.</div>
-                </div>
-                <div class="col-md-6">
-                  <label for="phone" class="form-label">Phone Number</label>
-                  <input type="tel" class="form-control" id="phone" placeholder="+91 98765 43210" required>
-                  <div class="invalid-feedback">Please enter your phone number.</div>
-                </div>
+            <p class="form-note">
+              After successful validation, EmailJS sends this booking to the
+              configured email service.
+            </p>
+
+            <!-- These hidden fields are filled by JavaScript before sending. -->
+            <input type="hidden" name="selected_services" id="selectedServices">
+            <input type="hidden" name="total_amount" id="emailTotalAmount">
+
+            <div class="mb-3">
+              <label for="fullName">Full Name</label>
+              <input
+                type="text"
+                id="fullName"
+                name="customer_name"
+                class="form-control"
+                placeholder="Enter your full name"
+              >
+              <small class="field-error" id="nameError"></small>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="customer_email"
+                  class="form-control"
+                  placeholder="you@example.com"
+                >
+                <small class="field-error" id="emailError"></small>
               </div>
-              <button type="submit" class="btn btn-primary btn-lg rounded-pill w-100 mt-4">
-                Book Now <i class="bi bi-arrow-right ms-1"></i>
-              </button>
-            </form>
-            <div class="alert alert-success mt-3 d-none" id="bookingSuccess"></div>
-          </div>
+
+              <div class="col-md-6">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="form-control"
+                  placeholder="+91 98765 43210"
+                >
+                <small class="field-error" id="phoneError"></small>
+              </div>
+            </div>
+
+            <div class="mb-3 mt-3">
+              <label for="message">Message / Address</label>
+              <textarea
+                id="message"
+                name="message"
+                class="form-control"
+                rows="3"
+                placeholder="Pickup address or any special instructions"
+              ></textarea>
+              <small class="field-error" id="messageError"></small>
+            </div>
+
+            <button id="bookingButton" type="submit" class="btn btn-primary w-100 rounded-pill">
+              <span id="buttonText">Book Now & Send Email</span>
+              <span id="buttonSpinner" class="spinner-border spinner-border-sm d-none"></span>
+            </button>
+
+            <div id="bookingStatus" class="booking-status mt-3" role="alert"></div>
+          </form>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Quality Description -->
-  <section class="section-padding quality-section">
+
+  <!-- QUALITY -->
+  <section id="about" class="section-padding">
     <div class="container">
       <div class="row align-items-center g-5">
+
         <div class="col-lg-6">
-          <span class="eyebrow">Why choose us</span>
-          <h2>Quality You Can Feel in Every Clean</h2>
-          <p class="text-muted">
-            We combine careful handling, modern equipment, quick turnaround and reliable delivery to give every garment the attention it deserves.
-          </p>
-          <div class="quality-list">
-            <div><i class="bi bi-check2-circle"></i><span><strong>Premium services</strong><small>Carefully selected cleaning processes.</small></span></div>
-            <div><i class="bi bi-check2-circle"></i><span><strong>Quick support</strong><small>Easy communication from booking to delivery.</small></span></div>
-            <div><i class="bi bi-check2-circle"></i><span><strong>Timely delivery</strong><small>Reliable pickup and drop-off scheduling.</small></span></div>
-            <div><i class="bi bi-check2-circle"></i><span><strong>Affordable prices</strong><small>Professional care without unnecessary costs.</small></span></div>
+          <div class="section-title text-start">
+            <p>WHY CHOOSE US</p>
+            <h2>Quality You Can Feel in Every Clean</h2>
           </div>
+
+          <p class="text-muted">
+            We focus on careful handling, fast service and reliable delivery
+            so every item receives the attention it deserves.
+          </p>
+
+          <ul class="quality-list">
+            <li><i class="bi bi-check-circle-fill"></i> Premium cleaning services</li>
+            <li><i class="bi bi-check-circle-fill"></i> Quick customer support</li>
+            <li><i class="bi bi-check-circle-fill"></i> Timely pickup and delivery</li>
+            <li><i class="bi bi-check-circle-fill"></i> Affordable prices</li>
+          </ul>
         </div>
+
         <div class="col-lg-6">
           <div class="quality-card">
-            <div class="quality-icon"><i class="bi bi-stars"></i></div>
+            <i class="bi bi-stars"></i>
             <h3>Freshness Guaranteed</h3>
-            <p>Every item is cleaned, finished and prepared with a quality-first approach.</p>
-            <div class="mini-stats">
-              <div><strong>98%</strong><span>Happy clients</span></div>
+            <p>
+              Every garment is cleaned, finished and prepared with
+              a quality-first approach.
+            </p>
+
+            <div class="quality-numbers">
+              <div><strong>98%</strong><span>Happy Clients</span></div>
               <div><strong>15+</strong><span>Services</span></div>
-              <div><strong>24h</strong><span>Fast option</span></div>
+              <div><strong>24h</strong><span>Fast Option</span></div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Newsletter -->
+
+  <!-- NEWSLETTER -->
   <section class="newsletter-section">
     <div class="container">
-      <div class="newsletter-card">
+      <div class="newsletter">
         <div>
-          <span class="eyebrow">Stay connected</span>
+          <p>STAY CONNECTED</p>
           <h2>Subscribe to our newsletter.</h2>
-          <p>Get service updates, useful laundry tips and special offers.</p>
+          <span>Get laundry tips, offers and service updates.</span>
         </div>
-        <form id="newsletterForm" class="newsletter-form">
-          <div class="input-group">
-            <input type="text" class="form-control" id="newsletterName" placeholder="Full name" aria-label="Full name" required>
-            <input type="email" class="form-control" id="newsletterEmail" placeholder="Email address" aria-label="Email address" required>
-            <button class="btn btn-primary px-4" type="submit">Subscribe</button>
+
+        <form id="newsletterForm">
+          <div class="row g-2">
+            <div class="col-md-4">
+              <input
+                type="text"
+                name="subscriber_name"
+                id="subscriberName"
+                class="form-control"
+                placeholder="Full name"
+              >
+            </div>
+            <div class="col-md-5">
+              <input
+                type="email"
+                name="subscriber_email"
+                id="subscriberEmail"
+                class="form-control"
+                placeholder="Email address"
+              >
+            </div>
+            <div class="col-md-3">
+              <button class="btn btn-light w-100" type="submit">Subscribe</button>
+            </div>
           </div>
-          <div class="small text-white-50 mt-2 d-none" id="newsletterMessage"></div>
+          <small id="newsletterStatus"></small>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer" id="contact">
+
+  <!-- FOOTER -->
+  <footer id="contact">
     <div class="container">
-      <div class="row g-5">
+      <div class="row g-4">
+
         <div class="col-lg-4">
-          <a class="footer-brand" href="#home"><span class="brand-mark"><i class="bi bi-basket2-fill"></i></span>Fresh<span>Fold</span></a>
-          <p class="mt-3">Professional laundry care, convenient booking and reliable delivery for everyday life.</p>
-          <div class="socials">
-            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-          </div>
+          <a class="footer-logo" href="#home">
+            <span class="logo-icon"><i class="bi bi-basket2-fill"></i></span>
+            Fresh<span>Fold</span>
+          </a>
+          <p>
+            Professional laundry care with convenient booking
+            and reliable delivery.
+          </p>
         </div>
+
         <div class="col-6 col-lg-2">
-          <h5>Important Links</h5>
+          <h4>Important Links</h4>
           <a href="#home">Home</a>
           <a href="#services">Services</a>
           <a href="#about">About Us</a>
           <a href="#booking">Book Now</a>
         </div>
+
         <div class="col-6 col-lg-3">
-          <h5>Contact</h5>
-          <a href="tel:+919876543210"><i class="bi bi-telephone me-2"></i>+91 98765 43210</a>
-          <a href="mailto:hello@freshfold.in"><i class="bi bi-envelope me-2"></i>hello@freshfold.in</a>
-          <span><i class="bi bi-geo-alt me-2"></i>New Delhi, India</span>
+          <h4>Contact</h4>
+          <a href="tel:+919876543210">+91 98765 43210</a>
+          <a href="mailto:hello@freshfold.in">hello@freshfold.in</a>
+          <span>New Delhi, India</span>
         </div>
+
         <div class="col-lg-3">
-          <h5>Follow Us</h5>
-          <p>Stay connected for laundry tips, offers and updates.</p>
-          <div class="footer-badges">
-            <span><i class="bi bi-shield-check"></i> Trusted Service</span>
-            <span><i class="bi bi-clock"></i> Quick Support</span>
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
+
       </div>
-      <div class="footer-bottom">
-        <span>© <span id="year"></span> FreshFold Laundry Services. All rights reserved.</span>
-        <span>Built with HTML, CSS, Bootstrap & Vanilla JavaScript.</span>
+
+      <div class="copyright">
+        <span>© <span id="year"></span> FreshFold Laundry Services</span>
+        <span>HTML + CSS + Bootstrap + Vanilla JavaScript + EmailJS</span>
       </div>
     </div>
   </footer>
 
-  <div class="toast-container position-fixed bottom-0 end-0 p-3">
-    <div id="actionToast" class="toast align-items-center border-0 shadow" role="alert">
-      <div class="d-flex">
-        <div class="toast-body" id="toastMessage">Service added.</div>
-        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
-      </div>
-    </div>
-  </div>
 
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- EmailJS browser SDK -->
+  <!-- EmailJS official browser SDK: https://www.emailjs.com/docs/sdk/installation/ -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
   <script src="script.js"></script>
 </body>
 </html>
